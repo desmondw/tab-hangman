@@ -536,8 +536,6 @@ var words = [
   'move',
   'movement',
   'movie',
-  'Mr',
-  'Mrs',
   'much',
   'music',
   'must',
@@ -569,7 +567,6 @@ var words = [
   'nothing',
   'notice',
   'now',
-
   'number',
   'occur',
   'of',
@@ -638,7 +635,6 @@ var words = [
   'plant',
   'play',
   'player',
-  'PM',
   'point',
   'police',
   'policy',
@@ -921,7 +917,6 @@ var words = [
   'truth',
   'try',
   'turn',
-  'TV',
   'two',
   'type',
   'under',
@@ -1063,7 +1058,7 @@ let game = {
   },
 
   getWord() {
-    return words[Math.floor(Math.random() * words.length)];
+    return words[Math.floor(Math.random() * words.length)].toLowerCase();
   },
 }
 
