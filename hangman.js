@@ -1023,8 +1023,6 @@ let game = {
   },
 
   handleInput(e) {
-    console.log(e)
-
     if (e.key == ' ') {
       this.newGame();
     } else if (65 <= e.keyCode && e.keyCode <= 90) {
@@ -1058,8 +1056,7 @@ let game = {
         this.title = this.title.split('').map((v,i)=>{
           return (v == '_') ? this.word[i].toUpperCase() : v;
         }).join('');
-        document.title = this.title.split('').join(' ');
-        document.title += ' ... you lost';
+        document.title = this.title.split('').join(' ') + ' ... you lost';
       }
     }
     this.updateHangman();
@@ -1073,4 +1070,3 @@ let game = {
 document.addEventListener('keydown', (e)=> { game.handleInput(e) });
 
 game.newGame()
-console.log(game.word)
